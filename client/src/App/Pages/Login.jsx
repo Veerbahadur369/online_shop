@@ -16,9 +16,9 @@ const Login = () => {
  const states= useSelector(state=>state.loginData);
  console.log(states )
  
-const onSubmit= (data)=>{
+const onSubmit=async (data)=>{
  
-      axios.post(`http://localhost:4000/api/v1/user/userLogin`,data)
+    await  axios.post(`http://localhost:4000/api/v1/user/userLogin`,data)
       .then(res=>{
    
         if(res.status===200){
