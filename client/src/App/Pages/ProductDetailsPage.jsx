@@ -27,7 +27,7 @@ const ProductDetailsPage = () => {
       const response = await axios.get(
         `${baseUrl}/api/v1/proudct/getDetailsOfProduct/${_id}`,
         {
-          withCredentials: true,
+         // withCredentials: true,
           headers: {
             Authorization: `Bearer ${token}`,
           },

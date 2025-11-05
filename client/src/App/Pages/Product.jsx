@@ -28,7 +28,7 @@ const token= localStorage.getItem("acceessToken")
         setLoading(true);
         console.log('hello')
         const { data } = await axios.get(`${baseUrl}/api/v1/proudct/getAllProudcts`,{
-          withCredentials:true,
+           // withCredentials:true,
           headers:{
              "Content-Type": "application/json",
               Authorization: `Bearer ${token}`
