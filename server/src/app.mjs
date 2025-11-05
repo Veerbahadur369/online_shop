@@ -19,7 +19,7 @@ app.use(express.urlencoded({
 })) 
 app.use(cookieParser())
  
-app.get('/',(res,req)=>{
+app.get('/',(req,res)=>{
   res.json({
     message:"Welcome to our backend server",
     status:true
