@@ -9,7 +9,7 @@ import { mailRoute } from './routes/mailRoute.mjs'
 
 const app = express()
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://online-shop-1-bguv.onrender.com',
   credentials: true
 }));
 app.use(express.json({ limit: '16kb' }))
