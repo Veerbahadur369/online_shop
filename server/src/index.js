@@ -5,10 +5,10 @@ import { dbConnection } from './config/db.mjs';
 import cors from 'cors'
 
 
-dotenv.config( );
-app.use(cors({
-    path:'./.env'
-}));
+dotenv.config({
+    path: './.env'
+});
+app.use(cors());
 const port = process.env.PORT || 5000
 app.listen(port, () => {
     dbConnection().catch((error) => {
