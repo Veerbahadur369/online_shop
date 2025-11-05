@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import {   useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../shareUrl";
  
 
 const Register = () => {
@@ -20,7 +21,7 @@ const Register = () => {
 const onSubmit =async (data) => {
   
     
-   await axios.post('http://localhost:4000/api/v1/user/userRegister',data).catch((er)=>{
+   await axios.post(`${baseUrl}/api/v1/user/userRegister`,data).catch((er)=>{
         console.log("Getting error while register",er);
         setSuccess(true);
     })

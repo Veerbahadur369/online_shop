@@ -5,6 +5,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
 import { useDispatch, useSelector,   } from 'react-redux';
 import { getUserData, isAuthenticated } from '../Redux/slices/login.slice';
+import { baseUrl } from '../shareUrl';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Login = () => {
  
 const onSubmit= (data)=>{
  
-      axios.post('http://localhost:4000/api/v1/user/userLogin',data)
+      axios.post(`${baseUrl}/api/v1/user/userLogin`,data)
       .then(res=>{
    
         if(res.status===200){

@@ -2,6 +2,7 @@
  import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { baseUrl } from '../shareUrl';
 
 const ContactUs = () => {
   // ✅ Initialize React Hook Form
@@ -17,7 +18,7 @@ const ContactUs = () => {
     console.log("Form Data:", data);
 
      try {
-       await axios.post('http://localhost:4000/api/v1/nodeMailer/sendEmail',data)
+       await axios.post(`${baseUrl}/api/v1/nodeMailer/sendEmail`,data)
      
      alert("Message sent successfully!");
      reset(); // clear form after submission

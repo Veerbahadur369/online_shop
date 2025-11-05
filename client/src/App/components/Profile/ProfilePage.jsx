@@ -7,6 +7,7 @@ import { FiUser, FiSettings, FiLogOut, FiBox } from "react-icons/fi";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import { baseUrl } from "../../shareUrl";
  
 
 const ProfilePage = () => {
@@ -45,7 +46,7 @@ const handleAvatarChange =  async (e) => {
   try {
     
     const response =await  axios.patch(
-      'http://localhost:4000/api/v1/user/updateAvatarImage',
+      `${baseUrl}/api/v1/user/updateAvatarImage`,
      formdata,
     {
           withCredentials:true,

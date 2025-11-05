@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { FaFilter, FaTimes } from 'react-icons/fa';
 import Loader from '../components/common/Loader';
+import { baseUrl } from '../shareUrl';
 
 const Product = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -25,7 +26,7 @@ const token= localStorage.getItem("acceessToken")
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get('http://localhost:4000/api/v1/proudct/getAllProudcts',{
+        const { data } = await axios.get(`${baseUrl}/api/v1/proudct/getAllProudcts`,{
           withCredentials:true,
           headers:{
              "Content-Type": "application/json",

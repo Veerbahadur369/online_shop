@@ -10,6 +10,7 @@ import {
   FiAlertCircle,
   FiShoppingBag,
 } from "react-icons/fi";
+import { baseUrl } from "../shareUrl";
 
 const ProductDetailsPage = () => {
   const { _id } = useParams();
@@ -24,7 +25,7 @@ const ProductDetailsPage = () => {
     setError(false);
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/v1/proudct/getDetailsOfProduct/${_id}`,
+        `${baseUrl}/api/v1/proudct/getDetailsOfProduct/${_id}`,
         {
           withCredentials: true,
           headers: {
