@@ -18,7 +18,7 @@ const Login = () => {
  
 const onSubmit= (data)=>{
  
-      axios.post(`${baseUrl}/api/v1/user/userLogin`,data)
+      axios.post(`http://localhost:4000/api/v1/user/userLogin`,data)
       .then(res=>{
    
         if(res.status===200){
