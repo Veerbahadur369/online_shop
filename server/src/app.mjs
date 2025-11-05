@@ -25,6 +25,12 @@ app.get('/',(req,res)=>{
     status:true
   })
 })
+app.get('/hello',(req,res)=>{
+  res.json({
+    message:"Welcome to our backend server",
+    status:true
+  })
+})
 app.use('/api/v1/user', routes);
 app.use('/api/v1/proudct', productRoutes);
 app.use('/api/v1/chatbot',aiAPI)
