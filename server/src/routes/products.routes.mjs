@@ -6,7 +6,7 @@ import { verifyJwt } from "../middleware/verifyJwt.mjs";
 const productRoutes = Router()
 
 productRoutes.get('/getAllProudcts',verifyJwt ,getAllProudcts);
-productRoutes.get('/getDetailsOfProduct/:_id' ,getDetailsOfProduct);
+productRoutes.get('/getDetailsOfProduct/:_id',verifyJwt ,getDetailsOfProduct);
 
 
 
