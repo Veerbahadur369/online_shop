@@ -11,6 +11,7 @@ import ContactUs from "./App/Pages/ContactUs";
 import ProductDetailsPage from "./App/Pages/ProductDetailsPage";
 import ProtectedRoute from "./App/components/common/ProtectedRoute";
 import BlogPage from "./App/Pages/BlogPage";
+import ErrorPage from "./App/Pages/ErrorPage";
 
 
 
@@ -31,7 +32,9 @@ function App() {
     <Route path="/about" element={<About/>}/>
     <Route path="/blog" element={<BlogPage/>}/>
     <Route path="/contact" element={<ContactUs/>}/>
+     <Route path="*" element={<ErrorPage/>}/>
     </Route>
+    <Route path="*" element={<ErrorPage/>}/>
   </Routes>
  
   )
