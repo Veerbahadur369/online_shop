@@ -19,7 +19,12 @@ app.use(express.urlencoded({
 })) 
 app.use(cookieParser())
  
-
+app.get('/',(res,req)=>{
+  res.json({
+    message:"Welcome to our backend server",
+    status:true
+  })
+})
 app.use('/api/v1/user', routes);
 app.use('/api/v1/proudct', productRoutes);
 app.use('/api/v1/chatbot',aiAPI)
