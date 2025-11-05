@@ -100,7 +100,7 @@ const onSubmit= (data)=>{
           </button>
           <p className="text-center text-sm text-gray-600 mt-4">
             Don't have an account?{' '}
-            <Link to="/resister" className="text-amber-600 hover:underline">
+            <Link to="/register" className="text-amber-600 hover:underline">
               Sign up
             </Link></p>
           <p className="text-center text-sm text-gray-600 mt-4">
