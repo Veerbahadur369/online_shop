@@ -10,6 +10,7 @@ import { mailRoute } from './routes/mailRoute.mjs'
 const app = express()
 app.use(cors({
   path:"https://online-shop-1-ssbu.onrender.com",
+  // path:"http://localhost:5173",
   credentials:true
 }));
 app.use(express.json({ limit: '16kb' }))

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaHeart, FaShoppingCart, FaUser, FaSearch, FaMoon, FaSun } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useSelector } from "react-redux";
+import logo from '../../../assets/b2315d5f-cc73-4a54-bbdd-66f7fde2fffc.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold tracking-wide">
-          Online<span className="text-amber-500 font-cursive">shop</span>
+          <img src={logo} className="h-15  w-15 rounded-full " alt="logo" />
         </Link>
 
         {/* Desktop Menu */}
